@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UISwitchSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWx-dq-Ww1">
+                                <rect key="frame" x="186" y="379.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xGN-m7-mzF">
+                                <rect key="frame" x="182.5" y="437.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchSateDidChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="gHD-Yw-Mji"/>
+                                </connections>
+                            </switch>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="riB-qd-aOU">
+                                <rect key="frame" x="107" y="74" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Djc-7q-B2l"/>
+                                    <constraint firstAttribute="height" constant="200" id="iMC-hv-qDE"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="riB-qd-aOU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="5Lp-HP-Sri"/>
+                            <constraint firstItem="xGN-m7-mzF" firstAttribute="top" secondItem="VWx-dq-Ww1" secondAttribute="bottom" constant="37" id="8aH-3U-Mjl"/>
+                            <constraint firstItem="riB-qd-aOU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IGL-5g-Vsz"/>
+                            <constraint firstItem="xGN-m7-mzF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Vcd-1c-9Mk"/>
+                            <constraint firstItem="VWx-dq-Ww1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qYK-UB-Nj2"/>
+                            <constraint firstItem="xGN-m7-mzF" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="wYp-9f-xcS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="VWx-dq-Ww1" id="ZYZ-Hx-EXD"/>
+                        <outlet property="lightImg" destination="riB-qd-aOU" id="drb-75-rFG"/>
+                        <outlet property="switch" destination="xGN-m7-mzF" id="atr-5U-1hd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="113"/>
+        </scene>
+    </scenes>
+</document>
